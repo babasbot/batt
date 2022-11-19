@@ -10,6 +10,20 @@ Displays the battery percentage level. 🔋
 
 A patched font. See `https://nerdfonts.com`.
 
+## Installation
+
+Add the `babasbot/tap` formulae to Hombrew:
+
+```
+brew tap babasbot/batt
+```
+
+Then, install the formulae running:
+
+```
+brew install batt
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
