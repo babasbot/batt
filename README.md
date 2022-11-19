@@ -1,6 +1,6 @@
 # batt
 
-Displays the battery percentage level. 🔋
+Displays the battery percentage level. Ideal for showing the battery percentage in your tmux status bar.
 
 ## Usage
 
@@ -27,3 +27,6 @@ brew install batt
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+<img width="750" alt="Screenshot 2022-11-18 at 19 33 12" src="https://user-images.githubusercontent.com/764518/202827801-dea17d92-0120-4b9a-8251-491ca01e7b09.png">
+
