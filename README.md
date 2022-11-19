@@ -24,9 +24,16 @@ Then, install the formulae running:
 brew install batt
 ```
 
+## Troubleshooting
+
+`ohmyzsh` users should disable the `batt` built in alias. To disable the built in alias run:
+
+```
+echo 'unalias batt' >> ~/.zshrc
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
 
 <img width="750" alt="Screenshot 2022-11-18 at 19 33 12" src="https://user-images.githubusercontent.com/764518/202827801-dea17d92-0120-4b9a-8251-491ca01e7b09.png">
-
