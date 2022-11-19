@@ -1,0 +1,41 @@
+#!/bin/bash
+
+TEMP_FILE=`mktemp -t batt`
+
+pmset -g batt > $TEMP_FILE
+
+BATT_PERCENTAGE=`sed -En 's/.*[[:blank:]]+([0-9]{2,3})%;.*/\1/p' $TEMP_FILE`
+BATT_CHARGING=`grep -cw charging $TEMP_FILE`
+
+if (( BATT_PERCENTAGE == 100 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 90 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 80 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 70 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 60 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 50 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 40 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 30 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 20 )); then
+  BATT_ICON=''
+elif (( BATT_PERCENTAGE >= 10 )); then
+  BATT_ICON=''
+else
+  BATT_ICON=''
+fi
+
+if (( BATT_CHARGING > 0 )); then
+  CHAR_ICON=''
+else
+  CHAR_ICON=''
+fi
+
+echo -n "${BATT_ICON}${CHAR_ICON} ${BATT_PERCENTAGE}%"
+
